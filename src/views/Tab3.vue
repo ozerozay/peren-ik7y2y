@@ -142,6 +142,8 @@ export default defineComponent({
       const max = items.value.length + 20;
       const min = max - 20;
       for (let i = min; i < max; i++) {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+      //@ts-ignore
         items.value.push(i);
       }
     }
@@ -150,11 +152,15 @@ export default defineComponent({
       setTimeout(() => {
         pushData();
         console.log('Loaded data');
+        // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+      //@ts-ignore
         ev.target.complete();
 
         // App logic to determine if all data is loaded
         // and disable the infinite scroll
         if (items.value.length == 1000) {
+          // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
+      //@ts-ignore
           ev.target.disabled = true;
         }
       }, 500);
