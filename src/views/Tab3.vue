@@ -48,27 +48,31 @@
         <ion-item-sliding id="item100" v-for="item in items" :key="item">
       <ion-item href="#">
         <ion-label>
-          <h2>HubStruck Notifications</h2>
-          <p>A new message in your network</p>
-          <p>Oceanic Next has joined your network</p>
+          <h2>Cihat Özer Özay</h2>
+          <p>Aranmak istemiyor / Melike</p>
+          <p>0 / 3 Randevu</p>
+          <p><b>Son İşlem: 20.08.2021</b></p>
         </ion-label>
         <ion-note slot="end">
-          10:45 AM
+          CEVAPSIZ
         </ion-note>
       </ion-item>
 
       <ion-item-options side="start">
         <ion-item-option>
-          <ion-icon slot="icon-only" :icon="heart"></ion-icon>
+          <ion-icon slot="icon-only" :icon="call"></ion-icon>
+        </ion-item-option>
+        <ion-item-option color="success">
+          <ion-icon slot="icon-only" :icon="logoWhatsapp"></ion-icon>
         </ion-item-option>
       </ion-item-options>
 
       <ion-item-options side="end">
-        <ion-item-option color="danger">
-          <ion-icon slot="icon-only" :icon="trash"></ion-icon>
-        </ion-item-option>
         <ion-item-option>
-          <ion-icon slot="icon-only" :icon="star"></ion-icon>
+          <ion-icon slot="icon-only" :icon="add"></ion-icon>
+        </ion-item-option>
+        <ion-item-option color="success">
+          <ion-icon slot="icon-only" :icon="calendar"></ion-icon>
         </ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
@@ -113,7 +117,11 @@ import {
   ellipsisVertical,
   heart, 
   star, 
-  trash
+  trash,
+  calendar,
+  add,
+  call,
+  logoWhatsapp
 } from 'ionicons/icons';
 import { defineComponent, ref } from 'vue';
 
@@ -178,7 +186,11 @@ export default defineComponent({
       ellipsisVertical,
       heart, 
       star, 
-      trash
+      trash,
+      calendar,
+      add,
+      call,
+      logoWhatsapp
     }
   }
 });
